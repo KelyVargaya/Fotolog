@@ -1,5 +1,6 @@
 /*aquí va tu código*/
-function init(){
+
+function mostrar(){
 	var guardado= document.getElementById("guardar");
 	guardado.addEventListener("click", guardarDatos);
 	guardarDatos();
@@ -19,7 +20,7 @@ function guardarDatos(){
 		 var value = localStorage.getItem(clav);
 
 		 var divcito= document.createElement("div");
-		     divcito.setAttribute("class", "comment");        
+		     divcito.setAttribute("class", "comentario");        
          
          var nombre = document.createElement("h2");
          var valor1= document.createTextNode(clav);
@@ -42,9 +43,8 @@ function guardarDatos(){
 var limpiarDatos = document.getElementById("limpiar"); 
     limpiarDatos.addEventListener("click", function(){ 
     	localStorage.clear();
-
     	contenedor.innerHTML= "";
     });
 
 
-init();
+mostrar();
